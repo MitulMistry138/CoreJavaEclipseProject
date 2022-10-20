@@ -13,7 +13,7 @@ public class EmployeeDaoImpl implements EmployeDao {
 	List<Employe> eList = new ArrayList<Employe>();
 
 	// creating Scanner object
-	Scanner sc = new Scanner(System.in);
+	Scanner e1 = new Scanner(System.in);
 
 	@Override
 	public void addEmployeDetails() {
@@ -24,11 +24,11 @@ public class EmployeeDaoImpl implements EmployeDao {
 		// input the details of employe
 
 		System.out.println("Employe id :");
-		emp.setEmp_id(sc.nextInt());
+		emp.setEmp_id(e1.nextInt());
 		System.out.println("Employe  name :");
-		emp.setEmp_name(sc.next());
+		emp.setEmp_name(e1.next());
 		System.out.println("Employe  Salary :");
-		emp.setEmp_salary(sc.nextDouble());
+		emp.setEmp_salary(e1.nextDouble());
 
 		eList.add(emp);
 		System.out.println();
@@ -75,18 +75,18 @@ public class EmployeeDaoImpl implements EmployeDao {
 			int ch = 0;
 			System.out.println("1. Update name");
 			System.out.println("2. Update Salary Status");
-			ch = sc.nextInt();
+			ch = e1.nextInt();
 			switch (ch) {
 			case 1:
 				System.out.println("Enter the name :");
-				empfindData.setEmp_name(sc.next());
+				empfindData.setEmp_name(e1.next());
 				System.out.println("Name updated........");
 				status = true;
 				break;
 
 			case 2:
 				System.out.println("Enter the salary :");
-				empfindData.setEmp_salary(sc.nextDouble());
+				empfindData.setEmp_salary(e1.nextDouble());
 				System.out.println("Salary updated........");
 				status = true;
 				break;
